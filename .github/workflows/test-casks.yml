@@ -1,0 +1,15 @@
+name: Test casks
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew tap homebrew/cask
+      - run: brew audit --strict --cask Casks/*.rb

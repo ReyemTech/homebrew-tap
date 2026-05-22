@@ -2,15 +2,16 @@ cask "stint-beta" do
   version "0.0.0-beta.0"
   sha256 "0000000000000000000000000000000000000000000000000000000000000000"
 
-  url "https://github.com/reyemtech/stint/releases/download/beta-latest/Stint-Beta-latest.dmg",
-      verified: "github.com/reyemtech/stint/"
+  url "https://github.com/reyemtech/stint/releases/download/v#{version}/Stint-#{version}.dmg"
   name "Stint"
   desc "Pre-release builds of Stint"
   homepage "https://github.com/reyemtech/stint"
 
+  # livecheck scrapes the moving beta-latest Release's asset list (it always
+  # mirrors the newest beta's versioned DMG) to detect the latest prerelease.
   livecheck do
     url "https://github.com/reyemtech/stint/releases/expanded_assets/beta-latest"
-    regex(/Stint-Beta-(\d+(?:\.\d+)*(?:-beta\.\d+)?)\.dmg/i)
+    regex(/Stint-(\d+(?:\.\d+)*(?:-beta\.\d+)?)\.dmg/i)
   end
 
   auto_updates true

@@ -2,8 +2,7 @@ cask "stint" do
   version "0.0.0"
   sha256 "0000000000000000000000000000000000000000000000000000000000000000"
 
-  url "https://github.com/reyemtech/stint/releases/download/v#{version}/Stint-#{version}.dmg",
-      verified: "github.com/reyemtech/stint/"
+  url "https://github.com/reyemtech/stint/releases/download/v#{version}/Stint-#{version}.dmg"
   name "Stint"
   desc "Time tracker that syncs with Solidtime (CLI + menu bar app)"
   homepage "https://github.com/reyemtech/stint"

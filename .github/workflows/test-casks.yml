@@ -11,5 +11,10 @@ jobs:
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v4
-      - run: brew tap homebrew/cask
-      - run: brew audit --strict --cask Casks/*.rb
+      - name: Symlink checkout as a Homebrew tap
+        run: |
+          set -euo pipefail
+          taps_dir="$(brew --repository)/Library/Taps/reyemtech"
+          mkdir -p "$taps_dir"
+          ln -sf "$GITHUB_WORKSPACE" "$taps_dir/homebrew-tap"
+      - run: brew audit --strict --tap reyemtech/tap

@@ -1,6 +1,6 @@
 cask "stint" do
-  version "0.1.5"
-  sha256 "730c96c8805f28f60a694efbacc86775852c994404887bce3a5c4950988ad9e1"
+  version "0.2.0"
+  sha256 "60ba6345c7fa9b29e39bc8402707498d80cd375c89dd0f691fde785f94a2fd68"
 
   url "https://github.com/reyemtech/stint/releases/download/v#{version}/Stint-#{version}.dmg"
   name "Stint"

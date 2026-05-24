@@ -21,8 +21,7 @@ cask "stint-beta" do
   binary "#{appdir}/Stint.app/Contents/MacOS/stint"
 
   uninstall quit:      "tech.reyem.stint",
-            launchctl: "tech.reyem.stint",
-            delete:    "/Applications/Stint.app"
+            launchctl: "tech.reyem.stint"
 
   zap trash: [
     "~/Library/Application Support/stint",

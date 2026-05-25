@@ -12,11 +12,16 @@ cask "stint" do
     strategy :github_latest
   end
 
-  auto_updates true
+  # `auto_updates true` removed intentionally: brew's upgrade code path with
+  # auto_updates set uninstalls /Applications/Stint.app but then skips the
+  # install/copy step, leaving the user with no app. Tauri's in-app updater
+  # still works independently — auto_updates is purely a brew-side hint and
+  # doesn't affect runtime self-update behavior.
   depends_on macos: ">= :ventura"
 
   app "Stint.app"
   binary "#{appdir}/Stint.app/Contents/MacOS/stint"
+  manpage "#{appdir}/Stint.app/Contents/Resources/man/man1/stint.1"
 
   uninstall quit:      "tech.reyem.stint",
             launchctl: "tech.reyem.stint"

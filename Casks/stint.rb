@@ -17,20 +17,20 @@ cask "stint" do
   # install/copy step, leaving the user with no app. Tauri's in-app updater
   # still works independently — auto_updates is purely a brew-side hint and
   # doesn't affect runtime self-update behavior.
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Stint.app"
   binary "#{appdir}/Stint.app/Contents/MacOS/stint"
   manpage "#{appdir}/Stint.app/Contents/Resources/man/man1/stint.1"
 
-  uninstall quit:      "tech.reyem.stint",
-            launchctl: "tech.reyem.stint"
+  uninstall launchctl: "tech.reyem.stint",
+            quit:      "tech.reyem.stint"
 
   zap trash: [
     "~/Library/Application Support/stint",
-    "~/Library/Preferences/tech.reyem.stint.plist",
     "~/Library/Caches/tech.reyem.stint",
     "~/Library/Logs/stint",
+    "~/Library/Preferences/tech.reyem.stint.plist",
     "~/Library/WebKit/tech.reyem.stint",
   ]
 end

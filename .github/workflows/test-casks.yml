@@ -17,4 +17,6 @@ jobs:
           taps_dir="$(brew --repository)/Library/Taps/reyemtech"
           mkdir -p "$taps_dir"
           ln -sf "$GITHUB_WORKSPACE" "$taps_dir/homebrew-tap"
+      # Homebrew 7 refuses to load formulae from third-party taps until they are trusted.
+      - run: brew trust reyemtech/tap
       - run: brew audit --strict --tap reyemtech/tap

@@ -1,4 +1,4 @@
-name: Test casks
+name: Test casks and formulae
 on:
   pull_request:
     branches: [main]
@@ -8,7 +8,7 @@ permissions:
   contents: read
 jobs:
   audit:
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
       - name: Symlink checkout as a Homebrew tap

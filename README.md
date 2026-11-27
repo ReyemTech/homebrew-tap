@@ -20,7 +20,10 @@ the `axl` binary for macOS and Linux (x86_64 and arm64).
 
 ```sh
 brew install reyemtech/tap/axle
-axl serve            # web UI on http://127.0.0.1:7420
+
+mkdir -p ~/.axl
+export DATABASE_URL="sqlite://$HOME/.axl/axl.db"
+axl serve            # web UI on http://127.0.0.1:7420/ui
 ```
 
 See https://github.com/ReyemTech/axle for setup and docs.

@@ -1,25 +1,25 @@
 class Axle < Formula
   desc "Axle (axl): self-hosted MCP server where coding agents on any machine message each other and claim tasks under renewable leases, with a live web UI"
-  homepage "https://github.com/ReyemTech/axle"
-  version "0.1.1"
+  homepage "https://github.com/ReyemTech/axle#readme"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ReyemTech/axle/releases/download/v0.1.1/axle-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "3cd00d4afe5ff1b10600d64ac8b7ed66211784eeab4d4bda4e0668778f49d0ed"
+      url "https://github.com/ReyemTech/axle/releases/download/v0.1.2/axle-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "3a039be17cd1994bdcfdf3a812e0b8a418cf6980b364e82ce6a61be0eb970828"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ReyemTech/axle/releases/download/v0.1.1/axle-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "01e691e0fdd7cdf05d42bd87a32361af6c27e0c90a02f152272dafacf8c84b7b"
+      url "https://github.com/ReyemTech/axle/releases/download/v0.1.2/axle-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "a1463fe0603f3ab6bae5daf5b2bf55af1447ba1fbfd021f844237f0c7e2fda7a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ReyemTech/axle/releases/download/v0.1.1/axle-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b52c1727287785607f6764e961a45122f21947f28507230f1c9ff4c754a7b18f"
+      url "https://github.com/ReyemTech/axle/releases/download/v0.1.2/axle-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6c38d966840bcd76924cefe667c2c0fb970d3f003ffc4ca1a057aae93acfc4c0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ReyemTech/axle/releases/download/v0.1.1/axle-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d36227ba0b3671c806b90f474903d9598dd1c2c524d2ae780dc3f84321a03064"
+      url "https://github.com/ReyemTech/axle/releases/download/v0.1.2/axle-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d0e497039093257e883ea5a65ab78ed3b8096282edf89860affcafa388d22433"
     end
   end
   license "Elastic-2.0"

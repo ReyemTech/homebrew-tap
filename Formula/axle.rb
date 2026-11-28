@@ -1,25 +1,25 @@
 class Axle < Formula
   desc "Axle (axl): self-hosted MCP server where coding agents on any machine message each other and claim tasks under renewable leases, with a live web UI"
   homepage "https://github.com/ReyemTech/axle#readme"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ReyemTech/axle/releases/download/v0.1.2/axle-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "3a039be17cd1994bdcfdf3a812e0b8a418cf6980b364e82ce6a61be0eb970828"
+      url "https://github.com/ReyemTech/axle/releases/download/v0.1.3/axle-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "c708933e99f8de601ffb0532b2e5473a214bf47f89330da93755471967f276b5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ReyemTech/axle/releases/download/v0.1.2/axle-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "a1463fe0603f3ab6bae5daf5b2bf55af1447ba1fbfd021f844237f0c7e2fda7a"
+      url "https://github.com/ReyemTech/axle/releases/download/v0.1.3/axle-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "44e3bee4e654f55ddf06fbd83a6a299cb9825ecfb0302c068b9c76b2dc280212"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ReyemTech/axle/releases/download/v0.1.2/axle-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6c38d966840bcd76924cefe667c2c0fb970d3f003ffc4ca1a057aae93acfc4c0"
+      url "https://github.com/ReyemTech/axle/releases/download/v0.1.3/axle-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "372c914836acc50c07c954f64b86d13628521a137823a9697f55dc03b29603b4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ReyemTech/axle/releases/download/v0.1.2/axle-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d0e497039093257e883ea5a65ab78ed3b8096282edf89860affcafa388d22433"
+      url "https://github.com/ReyemTech/axle/releases/download/v0.1.3/axle-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7a724af4c06c468c3b3a89850f1fd0793ef3f1618615a8dbcb9f631e4d5ad44d"
     end
   end
   license "Elastic-2.0"
